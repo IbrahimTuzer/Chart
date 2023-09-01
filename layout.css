@@ -1,0 +1,435 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2e2e4;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23aca1bd' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.mainWrapper {
+  display: flex;
+  width: 90%;
+  max-width: 960px;
+  height: 670px;
+  border-radius: 25px;
+  background-color: #f7f6f9;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+
+.navBarWrapper {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.topLogoWrapper {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  border-bottom: 0.4px solid rgba(0, 0, 0, 0.05);
+}
+.topLogoWrapper p {
+  cursor: pointer;
+}
+
+.navLinksWrapper {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.navUl li {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 23px;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+.navUl li:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.logoutWrapper {
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+  padding: 30px 55px 25px;
+  background-color: #f7f6f9;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listTypesWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.listTypesWrapper p:last-child {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.selectBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.selectBox span,
+.selectBox i {
+  font-size: 8px;
+}
+
+.listTypesWrapper p {
+  font-size: 18px;
+}
+
+.socialBoxWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialBox {
+  width: 120px;
+  height: 150px;
+  padding: 15px;
+  background-color: #f7f6f9;
+  border: 3.5px solid #fff;
+  border-radius: 18px;
+  transition: all 0.4s ease;
+}
+
+.socialBoxWrapper .socialBox:nth-of-type(2) {
+  background-color: #fff;
+}
+
+.socialBox:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.socialBox .iconBox {
+  font-size: 26px;
+}
+
+.socialBox .iconBox i.fa-brands.fa-twitter {
+  color: #1da1f2;
+}
+.socialBox .iconBox i.fa-brands.fa-instagram {
+  color: #4f5bd5;
+}
+.socialBox .iconBox i.fa-brands.fa-youtube {
+  color: #ff0000;
+}
+.socialBox .iconBox i.fa-brands.fa-facebook-f {
+  color: #4267b2;
+}
+
+.socialBox .dataBox {
+  margin-top: 13px;
+}
+
+.dataBox .data {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.dataBox .followers {
+  font-size: 10px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.moreBox p {
+  text-align: right;
+  margin-top: 12px;
+}
+
+.chartMainWrapper {
+  width: 100%;
+  height: 220px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chartMainWrapper .headerWrapper {
+  display: flex;
+}
+
+.chartMainWrapper .headerWrapper .title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chartMainWrapper .infoWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.chartMainWrapper .infoWrapper .gainbox,
+.chartMainWrapper .infoWrapper .lostbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chartMainWrapper .infoWrapper .gainbox .text,
+.chartMainWrapper .infoWrapper .lostbox .text {
+  font-size: 11px;
+}
+
+.chartMainWrapper .infoWrapper span.gain-circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 99999999px;
+}
+
+.chartMainWrapper .infoWrapper span.gain-circle.green {
+  background-color: yellowgreen;
+}
+.chartMainWrapper .infoWrapper span.gain-circle.red {
+  background-color: red;
+}
+
+.chartMainWrapper .mainContentWrapper {
+  height: 225px;
+  flex: 1;
+}
+
+.chartMainWrapper .mainContentWrapper canvas {
+  width: 100%;
+}
+
+.footerChartWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.footerChartWrapper .metrixWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 260px;
+
+  border-radius: 20px;
+  padding: 16px 18px;
+  background-color: #fff;
+}
+.footerChartWrapper .metrixWrapper .title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footerChartWrapper .statisticsWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex: 1;
+}
+.footerChartWrapper .metrixWrapper .metrixBox {
+  width: 100%;
+  height: 100%;
+}
+
+.footerChartWrapper .metrixWrapper .metrixBox ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footerChartWrapper .metrixWrapper .metrixBox ul li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.footerChartWrapper .metrixWrapper .metrixBox ul li:last-child {
+  border: none;
+}
+
+.statisticBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  background-color: #643a69;
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.statisticBox .title {
+  font-size: 12.2px;
+  line-height: 15px;
+  font-weight: 100;
+}
+
+.statisticBox .number {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.statisticBox .percantageBox {
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  gap: 5px;
+  font-weight: 300;
+}
+.statisticBox:first-child .percantageBox .icon {
+  color: #4dbb8d;
+}
+.statisticBox:last-child .percantageBox .icon {
+  color: #ec8590;
+}
+
+/* PROFILE */
+
+.profileWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px 20px;
+}
+
+.profileWrapper .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 0 8px;
+}
+
+.profileWrapper .header .notifications {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 105px;
+  height: 100%;
+  background-color: #fcf0f4;
+  border-radius: 8px;
+  font-size: 9px;
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+}
+.profileWrapper .hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+  border-radius: 18px;
+  background-color: #f7f6f9;
+}
+
+.profileWrapper .hero img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.profileWrapper .datePickerWrapper {
+  width: 100%;
+  height: 220px;
+}
+
+.profileWrapper .peopleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 140px;
+}
+
+.profileWrapper .peopleWrapper .peopleBox {
+  height: 100%;
+  width: 100%;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.profileWrapper .peopleWrapper .peopleBox img {
+  width: 35px;
+  height: 35px;
+}
+
+.datepicker {
+  width: 100% !important;
+}
